@@ -29,3 +29,13 @@ function quadrado(){
         document.write("o quadrado de " + " e  " + (i*i) + "<br>")
     }
 }
+
+function calcula(){
+    let val = document.getElementById("valo").value;
+    let j = document.getElementById("juros").value;
+    let t = document.getElementById("mese").value;
+   
+    let res = val * (1+(j/100));
+   
+    document.write("Resultado: "+res);
+}
