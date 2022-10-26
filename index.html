@@ -7,11 +7,20 @@
     <title>Primeiro E</title>
    <script src=" estilo.js"></script>
 </head>
+
+
 <body>
-    Valor:<input id="valor" type="text"><br>
-    Juros(Mensal):<input id="juros" type="text"><br>
-    Nr . Meses: <input id="meses" type="text"><br>
-    <button onclick="calcula()">Enviar</button>
+    <div class="calculadora">
+        <span id="valor">Total: 0,00</span><br>
+         Valor:<input id="valor" placeholder="capital"><br>
+         Juros(Mensal):<input id="juros" placeholder="juros"><br>
+         Nr . Meses: <input id="meses" placeholder="tempo" type="text"><br>
+        <button onclick="calcula()">Enviar</button>
+        <span id="mes">mes a mes</span>
+    </div>
+</body>
+
+</html>
     
     <br><br><br>
     Nota 1: <input id="t1" type="text"><br>
