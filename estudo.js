@@ -30,6 +30,11 @@ function quadrado(){
         document.write("O quadrado de " + i + " é " + (i*i) + "<br>");
     }
 }
+function moeda(atual){
+    return atual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+
+
+}
 
 function calcula(){
     let val = document.getElementById("valor").value;
@@ -60,11 +65,12 @@ function calcula(){
    
             let res = val;
     for(let m=1; m <= t;m++){
-        res = val * (1+(j/100));
+       let res = val * (1+(j/100));
         val = res;
-        document.write("Mes " + m + " = " + res + "<br>");
+        //document.write("Mes " + m + " = " + moeda(res) + " <br> ");
     }
-    document.write("Resultado: "+res);
+    document.write("Resultado: " + moeda(res));
+    //document.write("resultado "+ moeda(res);
 }
 
 function somarNotas(){
