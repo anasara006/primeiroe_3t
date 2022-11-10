@@ -1,66 +1,85 @@
-<!DOCTYPE html>
-<html lang="pt-br" dir="ltr">
+body {
+    margin: 0;
+    padding: 0;
+}
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-widh , initial-scale=1.0">
-  <title>Primeiro E</title>
-  <script src="estudo.js"></script>
-  <link rel="stylesheet" href="geral.css">
-</head>
+.calculadora {
+    background: rgb(255, 244, 145);
+    width: 200px;
+    color: black;
+    padding: 20px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 10px 10px rgba(216, 201, 71, 0.808);
+}
 
-<body>
-  <input type="checkbox" id="calcFin">
-  <div class="calculadora">
-    <label for="calcFin">
-      <h3>Financeira</h3>
-    </label>
+.calculadoraESG {
+    background: rgb(251, 237, 109);
+    width: 200px;
+    color: rgb(61, 61, 61);
+    padding: 20px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 10px 10px rgba(170, 156, 31, 0.808);
+}
 
-    <div class="calcF">
-      <div id="psTotal">
-        <span id="total">Total: 0,00</span><br>
-      </div>
-      Valor: <input id="valor" placeholder="Digite o Capital" type="text"><br>
-      Juros(Mensal): <input id="juros" placeholder="Digite os Juros (mensal)" type="text"><br>
-      Nr. Meses: <input id="meses" placeholder="Digite o Tempo (meses)" type="text"><br>
-      <button id="btnCalc" onclick="calcula()">Enviar</button><br>
-      <div class="spmes">
-        <span id="mes">Mês a Mês</span>
-      </div>
-    </div>
-  </div>
+.calculadora input {
+    background: rgba(212, 204, 204, 0.307);
+    color: rgba(0, 0, 0, 0.739);
+    border-radius: 10px;
+    padding: 8px;
+}
 
-  <input type="checkbox" id="calcESG">
-  <div class="calculadoraESG">
-    <label for="calcESG">
-      <h3>Equação<br>Segundo Grau</h3>
-    </label>
+.calculadoraESG input {
+    background: rgba(212, 204, 204, 0.307);
+    color: rgba(0, 0, 0, 0.739);
+    border-radius: 10px;
+    padding: 8px;
+}
 
-    <div class="calcESG">
-      <div id="psRaiz">
-        <span id="raiz">x1 e x2</span><br>
-      </div>
-      <input id="a" placeholder="Digite o valor de a" type="text"><br><br>
-      <input id="b" placeholder="DIgite o valor de b" type="text"><br><br>
-      <input id="c" placeholder="Digite o valor de c" type="text"><br><br>
-      <button onclick="calculaESG()">Calcular</button><br>
-    </div>
+.calcF {
+    display: none;
+}
 
-  </div>
+#calcFin {
+    display: none;
+}
 
-  <br><br><br>
+#calcFin:checked + .calculadora .calcF {
+    display: block;
+}
 
-  Nota 1: <input id="t1" type="text"><br>
-  Nota 2: <input id="t2" type="text"><br>
-  Nota 3: <input id="t3" type="text"><br>
+.calculadora input:focus {
+    background: white;
+    color: black;
+}
 
-  <button onclick="somarNotas()">Somar Notas</button>
-  <span id="resultadosoma">0</span><br>
-  <button onclick="mediaNotas()">Média Notas</button>
-  <span id="resultadomedia">0</span><br>
-  <button onclick="fecharNotas()">Notas para Fechar</button>
-  <span id="resultadofechar">0</span><br>
+#btnCalc {
+    background: rgb(255, 196, 86);
+    margin-top: 20px;
+    padding: 8px;
+}
 
-</body>
-<html>
+#btnCalc:hover {
+    background: orange;
+    color: white;
+    cursor: pointer;
+}
+
+#psTotal {
+    background: rgb(243, 219, 0);
+    color: white;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+.spmes {
+    width: 100%;
+    background: rgb(243, 219, 0);
+    lighting-color: orange;
+    border-radius: 20px;
+    border-style: dashed;
+    border-color: orange;
+    border-width: 3px;
+} 
